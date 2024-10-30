@@ -9,7 +9,7 @@ import vitePluginBundleObfuscator from "vite-plugin-bundle-obfuscator";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/', // 这里保持和你你的 GitHub 仓库名一致
+    base: '/vue-hip/', // 这里保持和你你的 GitHub 仓库名一致
     server: {
         host: process.env.VITE_HOST || '0.0.0.0',
     },
