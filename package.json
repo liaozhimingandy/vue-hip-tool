@@ -1,0 +1,33 @@
+{
+  "name": "vue-hip",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "ant-design-vue": "^4.2.5",
+    "axios": "^1.7.7",
+    "c-scrollbar": "^1.0.2",
+    "graphql-request": "^7.1.0",
+    "lodash": "^4.17.21",
+    "nprogress": "^0.2.0",
+    "path": "^0.12.7",
+    "pinia": "^2.2.4",
+    "vue": "^3.5.10",
+    "vue-router": "^4.4.5",
+    "vuedraggable": "^2.24.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.6",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-vue-components": "^0.27.4",
+    "vite-plugin-bundle-obfuscator": "^1.2.1",
+    "vite-plugin-remove-console": "^2.2.0"
+  }
+}
