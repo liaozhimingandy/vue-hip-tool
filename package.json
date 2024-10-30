@@ -23,6 +23,7 @@
     "vuedraggable": "^2.24.3"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.13",
     "@types/node": "^22.7.6",
     "@vitejs/plugin-vue": "^5.1.4",
     "unplugin-auto-import": "^0.18.2",
