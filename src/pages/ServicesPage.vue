@@ -54,7 +54,7 @@ const onSubmit = () => {
               <a-form-item v-for="item in service[service.service_code]" :label="item.comment"
                            :name="item.comment"
                            :rules="[{required: true, message: `请输入${item.comment}`, trigger: 'change' }, {min: 4, max: 36, message: '长度应该在4到36位之间', trigger: 'blur'}]">
-                <a-input v-model:value="item.value" :placeholder="item.path" has-feedback show-count>
+                <a-input v-model:value="item.value" :placeholder="item.path.toString().replace(/xmlns:/g, '')" has-feedback show-count>
                   <template #suffix>
                     <a-tooltip :title="item.sql">
                       <info-circle-outlined style="color: rgba(0, 0, 0, 0.45)"/>
