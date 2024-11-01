@@ -7,7 +7,7 @@ import dayjs from "dayjs";
 import "dayjs/locale/zh-cn";
 dayjs.locale("zh-cn");
 
-const locale = ref( zhCN);
+const locale = ref(zhCN);
 </script>
 
 <template>

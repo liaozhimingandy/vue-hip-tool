@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {ref, computed} from 'vue'
-import {cloneDeep} from 'lodash';
+import cloneDeep from 'lodash/cloneDeep';
 import {notification} from "ant-design-vue";
 const [api, contextHolder] = notification.useNotification();
 
@@ -26,7 +26,6 @@ const download_url = ref('')
 const onSubmit = () => {
   fetchExamplesServices({data: services.value})
       .then(result => {
-        console.log(result);
         download_url.value = result.downloadExamplesServices.message;
       })
       .catch(error => {
