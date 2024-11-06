@@ -2,25 +2,25 @@ import {createRouter, createWebHistory} from 'vue-router';
 
 // 引入nprogress
 import NProgress from 'nprogress';
-
+import 'nprogress/nprogress.css' // 引入样式
 
 import NotFoundPage from "../pages/NotFoundPage.vue";
 import HomePage from "../pages/HomePage.vue";
 import ServicesPage from "@/pages/ServicesPage.vue";
 import CDAPage from "@/pages/CDAPage.vue";
 
-
+NProgress.inc(0.2)
 // 进度条配置（可选）
 NProgress.configure({
-    speed: 500,            // 进度条增加的速度
+    speed: 2000,            // 进度条增加的速度
     showSpinner: false,    // 是否显示加载小图标
-    trickle: true,        // 是否显示一个小的进度条在顶部
+    trickle: false,        // 是否显示一个小的进度条在顶部
     trickleSpeed: 200,     // 顶部小进度条的更新速度
     minimum: 0.08,         // 进度条开始时的最小百分比
     ease: 'ease',         // 动画的缓动效果
     easeFrom: '1.4',      // 动画开始的缓动效果
     easeTo: '0.35',       // 动画结束的缓动效果
-    color: '#f00',        // 进度条的颜色
+    color: '#027AFF',        // 进度条的颜色
     positionUsing: '',    // CSS选择器或DOM元素，进度条将使用其边界进行定位
     prepend: false        // 是否将进度条插入到选择器或元素的子元素的最前面
 }); // 不显示默认的spinner

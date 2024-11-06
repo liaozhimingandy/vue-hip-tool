@@ -10,7 +10,7 @@ import {visualizer} from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/vue-hip/', // 这里保持和你你的 GitHub 仓库名一致
+    base: '/vue-hip-tool/', // 这里保持和你你的 GitHub 仓库名一致
     server: {
         host: process.env.VITE_HOST || '0.0.0.0',
     },

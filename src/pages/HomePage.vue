@@ -71,7 +71,7 @@ const collapsed = ref(false);
         </c-scrollbar>
       </a-layout-content>
     </a-layout>
-    <a-layout-footer style="text-align: center; background-color: white"> ©2024</a-layout-footer>
+    <a-layout-footer style="text-align: center; background-color: white">©2024 廖志明</a-layout-footer>
   </a-layout>
 </template>
 
