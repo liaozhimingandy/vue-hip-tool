@@ -7,10 +7,15 @@ import path from 'path';
 import removeConsole from 'vite-plugin-remove-console';
 import vitePluginBundleObfuscator from 'vite-plugin-bundle-obfuscator';
 import {visualizer} from 'rollup-plugin-visualizer';
+import {version} from './package.json';
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
     base: '/vue-hip-tool/', // 这里保持和你你的 GitHub 仓库名一致
+    define: {
+        __APP_VERSION__: JSON.stringify(version),
+    },
     server: {
         host: process.env.VITE_HOST || '0.0.0.0',
     },

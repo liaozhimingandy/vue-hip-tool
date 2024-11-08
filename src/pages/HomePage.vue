@@ -33,7 +33,7 @@ const components = reactive<any>({
   '1': ServicesPage,
   '2': CDAPage
 });
-const version = import.meta.env.VITE_APP_VERSION;
+const version = __APP_VERSION__;
 const APP_NAME = import.meta.env.VITE_APP_NAME;
 // 是否已经折叠
 const collapsed = ref(false);

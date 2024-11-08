@@ -2,8 +2,8 @@ name: Release Workflow
 
 on:
   push:
-    tags:
-      - 'v*' # 当推送标签时触发，比如 v1.0.0
+    branches:
+      - stable/*  # 指定在 stable/* 分支有提交时触发
 
 jobs:
   build:

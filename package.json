@@ -1,10 +1,14 @@
 {
-  "name": "vue-hip",
+  "name": "vue-hip-tool",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.12",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "update:major": "node update-version.js major",
+    "update:minor": "node update-version.js minor",
+    "update:patch": "node update-version.js patch",
+    "prebuild": "node update-version.js patch",
     "build": "vite build",
     "preview": "vite preview"
   },
