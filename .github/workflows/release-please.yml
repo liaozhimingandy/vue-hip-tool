@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: write        # 允许写入代码内容
       pull-requests: write   # 允许创建和管理 Pull Requests
-      
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -27,4 +27,4 @@ jobs:
           release-type: "node"  # 这个可以是你的项目使用的配置文件对应的语言, 一般node使用的是package.json
           primary-branch: "main"  # 设置主分支
           package-name: "vue-hip-tool"  # 设置项目名称
-          token: "${{ secrets.GITHUB_TOKEN }}"  # 使用 GitHub Token
+          token: "${{ secrets.GH_TOKEN }}"  # 使用你的个人访问令牌
