@@ -19,6 +19,5 @@ jobs:
         uses: googleapis/release-please-action@v4 # https://github.com/googleapis/release-please-action
         with:
           release-type: "node"  # 这个可以是你的项目使用的配置文件对应的语言, 一般node使用的是package.json
-          primary-branch: "main"  # 设置主分支
           token: "${{ secrets.GH_TOKEN }}"  # 使用你的个人访问令牌
           target-branch: ${{ github.ref_name }}
