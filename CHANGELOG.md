@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.2](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.1...v0.2.2) (2024-11-09)
+
+
+### Bug Fixes
+
+* 优化CI构建 ([600c230](https://github.com/liaozhimingandy/vue-hip-tool/commit/600c2307381e2993584e4267faa57c038c2fa5fc))
+* 修复action自动构建问题 ([6641990](https://github.com/liaozhimingandy/vue-hip-tool/commit/6641990914609aa1d0c38d56fe65987996ca80c0))
+* 修复action自动构建问题2 ([b05be32](https://github.com/liaozhimingandy/vue-hip-tool/commit/b05be32fd3a2b02a28c1d686bf32320b2428db2a))
+* 修复action自动构建问题3 ([ff282b0](https://github.com/liaozhimingandy/vue-hip-tool/commit/ff282b00560a2a206c65da0b68e449f1bc4d7da5))
+* 修复action自动构建问题4 ([7827e9a](https://github.com/liaozhimingandy/vue-hip-tool/commit/7827e9aec2d21e2897337c715f66033c02ca9fc9))
+
 ## [0.2.1](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.0...v0.2.1) (2024-11-09)
 
 
