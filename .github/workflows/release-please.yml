@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - develop
 
 jobs:
   release:
@@ -13,13 +14,6 @@ jobs:
       pull-requests: write   # 允许创建和管理 Pull Requests
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
 
       - name: Run Release Please
         uses: googleapis/release-please-action@v4 # https://github.com/googleapis/release-please-action
@@ -27,3 +21,4 @@ jobs:
           release-type: "node"  # 这个可以是你的项目使用的配置文件对应的语言, 一般node使用的是package.json
           primary-branch: "main"  # 设置主分支
           token: "${{ secrets.GH_TOKEN }}"  # 使用你的个人访问令牌
+          target-branch: ${{ github.ref_name }}

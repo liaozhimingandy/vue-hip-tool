@@ -1,9 +1,10 @@
 name: Release Workflow
 
 on:
-  push:
-    branches:
-      - stable/*  # 指定在 stable/* 分支有提交时触发
+  workflow_run:
+    workflows: ["Automated Release"]  # 触发条件：当 release.yml 完成时触发
+    types:
+      - completed  # 等待 `release.yml` 完成
 
 jobs:
   build:
