@@ -5,10 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "update:major": "node update-version.js major",
-    "update:minor": "node update-version.js minor",
-    "update:patch": "node update-version.js patch",
-    "prebuild": "node update-version.js patch",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -29,6 +25,7 @@
   "devDependencies": {
     "@types/node": "^22.7.6",
     "@vitejs/plugin-vue": "^5.1.4",
+    "release-please": "^16.14.3",
     "rollup-plugin-visualizer": "^5.12.0",
     "unplugin-auto-import": "^0.18.2",
     "unplugin-vue-components": "^0.27.4",

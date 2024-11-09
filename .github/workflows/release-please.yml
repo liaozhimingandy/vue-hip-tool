@@ -1,0 +1,26 @@
+name: Automated Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Release Please
+        uses: googleapis/release-please-action@v4 # https://github.com/googleapis/release-please-action
+        with:
+          release-type: "node"  # 这个可以是你的项目使用的配置文件对应的语言, 一般node使用的是package.json
+          primary-branch: "main"  # 设置主分支
+          package-name: "vue-hip-tool"  # 设置项目名称
+          token: "${{ secrets.GITHUB_TOKEN }}"  # 使用 GitHub Token
