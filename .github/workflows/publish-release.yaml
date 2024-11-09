@@ -24,16 +24,16 @@ jobs:
         # 将合并状态传递给 GitHub Actions 环境变量
         if [[ "$PR_MERGED" == "true" ]]; then
           echo "PR $PR_NUMBER has been merged"
-          echo "pr_merged=true" >> $GITHUB_ENV  # 设置环境变量
+          echo "::set-output name=pr_merged::true" 
         else
           echo "PR $PR_NUMBER has not been merged"
-          echo "pr_merged=false" >> $GITHUB_ENV  # 设置环境变量
+          echo "::set-output name=pr_merged::false" 
         fi
 
   build:
     runs-on: ubuntu-latest
     needs: check-merge-status
-    if: ${{ env.pr_merged == 'true' }}  # 仅在 PR 合并后执行构建
+    if: ${{ needs.check-merge-status.outputs.pr_merged == 'true' }}  # 引用上一步的输出值来判断
 
     steps:
       - name: Checkout
