@@ -35,7 +35,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: check-merge-status
-    if: ${{ env.pr_merged == 'true' }}  # 引用上一步的输出值来判断
+    if: ${{ pr_merged == 'true' }}  # 引用上一步的输出值来判断
 
     steps:
       - name: Checkout
