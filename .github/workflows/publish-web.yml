@@ -2,10 +2,10 @@
 name: Deploy vue3 site to Pages
 
 on:
-  push:
-    branches:
-      - stable/*  # 指定在 stable/* 分支有提交时触发
-      - hotfix/*  # 指定在 hotfix/* 分支有提交时触发
+  workflow_run:
+    workflows: ["Automated Release"]  # 触发条件：当 release.yml 完成时触发
+    types:
+      - completed  # 等待 `release.yml` 完成
 
   # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
@@ -23,9 +23,36 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  check-merge-status:
+    runs-on: ubuntu-latest
+    outputs:
+      pr_merged: ${{ steps.check-pr.outputs.pr_merged }}  # 将合并状态作为输出传递给后续步骤
+    permissions:
+      contents: write  # 确保有写权限
+
+    steps:
+      - name: Get the PR merge status
+        id: check-pr
+        run: |
+          # 获取最近的 PR 合并信息，检查 PR 是否已合并
+          PR_NUMBER=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls?state=closed" | jq '.[0].number')
+          PR_MERGED=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls/$PR_NUMBER" | jq '.merged')
+          
+          # 将合并状态传递给 GitHub Actions 环境变量
+          if [[ "$PR_MERGED" == "true" ]]; then
+            echo "PR $PR_NUMBER has been merged"
+            echo "pr_merged=true" >> $GITHUB_ENV
+          
+          else
+            echo "PR $PR_NUMBER has not been merged"
+            echo "pr_merged=false" >> $GITHUB_ENV
+          fi
+
   # 构建工作
   build:
     runs-on: ubuntu-latest
+    needs: check-merge-status
+    if: ${{ needs.check-merge-status.outputs.pr_merged == 'true' }}  # 引用上一步的输出值来判断
     steps:
       - name: Checkout
         uses: actions/checkout@v4
