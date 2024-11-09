@@ -25,17 +25,17 @@ jobs:
         # 将合并状态传递给 GitHub Actions 环境变量
         if [[ "$PR_MERGED" == "true" ]]; then
           echo "PR $PR_NUMBER has been merged"
-          echo "pr_merged=true" >> "$GITHUB_ENV"
+          echo "pr_merged=true" >> $GITHUB_ENV
   
         else
           echo "PR $PR_NUMBER has not been merged"
-          echo "pr_merged=false" >> "$GITHUB_ENV"
+          echo "pr_merged=false" >> $GITHUB_ENV
         fi
 
   build:
     runs-on: ubuntu-latest
     needs: check-merge-status
-    if: ${{ pr_merged == 'true' }}  # 引用上一步的输出值来判断
+    if: ${{ env.pr_merged == 'true' }}  # 引用上一步的输出值来判断
 
     steps:
       - name: Checkout
