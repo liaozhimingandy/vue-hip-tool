@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.3](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.2...v0.2.3) (2024-11-09)
+
+
+### Bug Fixes
+
+* 修复Action自动构建失败问题 ([5e45736](https://github.com/liaozhimingandy/vue-hip-tool/commit/5e45736b74b1359c7d8aaba7757a8c1744089347))
+* 修复Action自动构建失败问题2 ([3644c00](https://github.com/liaozhimingandy/vue-hip-tool/commit/3644c001dfb7c317b90793ec692ffba3f7d81749))
+* 修复Action自动构建失败问题3 ([c7b7795](https://github.com/liaozhimingandy/vue-hip-tool/commit/c7b77957b2306c23cb2971ed1d2970f2012ed68a))
+* 修复Action自动构建失败问题3 ([2b13dbd](https://github.com/liaozhimingandy/vue-hip-tool/commit/2b13dbd4128dfe399a1eb535dd2f2442092145cc))
+* 修复Action自动构建失败问题4 ([f5be694](https://github.com/liaozhimingandy/vue-hip-tool/commit/f5be69421d77ebc9e4ee3823dd343f704807e742))
+* 修复Action自动构建失败问题5 ([ae0c61a](https://github.com/liaozhimingandy/vue-hip-tool/commit/ae0c61a1909ff3037b7bb3b8419b9bf066200a58))
+* 调整CI自动构建流程 ([fe0fcc3](https://github.com/liaozhimingandy/vue-hip-tool/commit/fe0fcc34d697cbb370ba793963e596a76241d671))
+* 调整自动构建流程,所有工作流都基于版本号自动发布 ([e81d779](https://github.com/liaozhimingandy/vue-hip-tool/commit/e81d77938671424744806e0347d206d43bde7342))
+
 ## [0.2.2](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.1...v0.2.2) (2024-11-09)
 
 
