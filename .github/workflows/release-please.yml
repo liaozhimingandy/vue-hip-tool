@@ -8,6 +8,10 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write        # 允许写入代码内容
+      pull-requests: write   # 允许创建和管理 Pull Requests
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
