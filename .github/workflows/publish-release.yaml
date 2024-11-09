@@ -13,7 +13,7 @@ jobs:
     permissions:
       contents: write  # 确保有写权限
 
-  steps:
+    steps:
     - name: Get the PR merge status
       id: check-pr
       run: |
@@ -28,8 +28,6 @@ jobs:
           echo "PR $PR_NUMBER has not been merged"
           echo "pr_merged=false" >> $GITHUB_ENV
         fi    
-
-
 
   build:
     runs-on: ubuntu-latest
