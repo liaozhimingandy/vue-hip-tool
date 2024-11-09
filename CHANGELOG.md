@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.0...v0.2.1) (2024-11-09)
+
+
+### Bug Fixes
+
+* 合并pr ([8768fd3](https://github.com/liaozhimingandy/vue-hip-tool/commit/8768fd344b0fef3f4d691581b1165795a311ad12))
+* 调整CI任务,触发自动构建 ([0fa451f](https://github.com/liaozhimingandy/vue-hip-tool/commit/0fa451fce2d4987c20ab268ef997c37fa7880eae))
+
 ## [0.2.0](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.1.11...v0.2.0) (2024-11-09)
 
 
