@@ -21,13 +21,14 @@ jobs:
         PR_NUMBER=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls?state=closed" | jq '.[0].number')
         PR_MERGED=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls/$PR_NUMBER" | jq '.merged')
         
-        if ${{  "$PR_MERGED" == "true" }} ; then
+        # 将合并状态传递给 GitHub Actions 环境变量
+        if [[ "$PR_MERGED" == "true" ]]; then
           echo "PR $PR_NUMBER has been merged"
-          echo "pr_merged=true" >> $GITHUB_ENV
+          echo "pr_merged=true" >> $GITHUB_ENV  # 设置环境变量
         else
           echo "PR $PR_NUMBER has not been merged"
-          echo "pr_merged=false" >> $GITHUB_ENV
-        fi    
+          echo "pr_merged=false" >> $GITHUB_ENV  # 设置环境变量
+        fi
 
   build:
     runs-on: ubuntu-latest
