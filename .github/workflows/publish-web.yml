@@ -40,12 +40,12 @@ jobs:
           
           # 将合并状态传递给 GitHub Actions 环境变量
           if [[ "$PR_MERGED" == "true" ]]; then
-          echo "PR $PR_NUMBER has been merged"
-          echo "::set-output name=pr_merged::true"
+            echo "PR $PR_NUMBER has been merged"
+            echo "pr_merged=true" >> $GITHUB_ENV
   
           else
             echo "PR $PR_NUMBER has not been merged"
-            echo "::set-output name=pr_merged::false"
+            echo "pr_merged=false" >> $GITHUB_ENV
           fi
 
   # 构建工作
