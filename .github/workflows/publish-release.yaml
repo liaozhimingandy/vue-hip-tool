@@ -10,7 +10,7 @@ jobs:
   check-merge-status:
     runs-on: ubuntu-latest
     outputs:
-      pr_merged: ${{ steps.check-pr.outputs.pr_merged }}  # 将合并状态作为输出传递给后续步骤
+      pr_merged: ${{ env.pr_merged }}  # 将合并状态作为输出传递给后续步骤
     permissions:
       contents: write  # 确保有写权限
 
@@ -48,7 +48,7 @@ jobs:
       # 确保在特定的分支（例如 main）上执行
       - name: Check out specific branch
         run: |
-          echo "值: ${{ env.pr_merged }}"
+          echo "值: ${{ needs.check-merge-status.outputs.pr_merged.pr_merged }}"
           git fetch origin main
           git checkout main
 
