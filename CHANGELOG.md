@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.15](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.14...v0.2.15) (2024-11-10)
+
+
+### Bug Fixes
+
+* 调试使用Github的环境变量22 ([8e645e0](https://github.com/liaozhimingandy/vue-hip-tool/commit/8e645e0ce11711d386ae88933c8f4563239c24a8))
+* 调试使用Github的环境变量23 ([e8d33da](https://github.com/liaozhimingandy/vue-hip-tool/commit/e8d33dae6f12757a2b614f5eadf900f43444d5da))
+
 ## [0.2.14](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.13...v0.2.14) (2024-11-10)
 
 
