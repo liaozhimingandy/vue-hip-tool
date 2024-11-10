@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.11](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.10...v0.2.11) (2024-11-10)
+
+
+### Bug Fixes
+
+* 调试使用Github的环境变量14 ([0d71e27](https://github.com/liaozhimingandy/vue-hip-tool/commit/0d71e273cbe4ea8030ce59ec5754ff9d4a55ba8e))
+* 调试使用Github的环境变量15 ([621c0be](https://github.com/liaozhimingandy/vue-hip-tool/commit/621c0be9ce093023f1622da0a560d605c5a93ce7))
+* 调试使用Github的环境变量16 ([718cdc7](https://github.com/liaozhimingandy/vue-hip-tool/commit/718cdc7aa74ece01596443fae75a6cc9a3fbedab))
+* 调试使用Github的环境变量17 ([bef94b0](https://github.com/liaozhimingandy/vue-hip-tool/commit/bef94b06458cb3bc368ed652b171b9aa7442a3c8))
+
 ## [0.2.10](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.9...v0.2.10) (2024-11-10)
 
 
