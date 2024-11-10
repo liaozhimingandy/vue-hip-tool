@@ -26,7 +26,7 @@ jobs:
   check-merge-status:
     runs-on: ubuntu-latest
     outputs:
-      pr_merged: ${{ steps.check-pr.outputs.pr_merged }}  # 将合并状态作为输出传递给后续步骤
+      pr_merged: ${{ env.pr_merged }}  # 将合并状态作为输出传递给后续步骤
     permissions:
       contents: write  # 确保有写权限
 
@@ -53,6 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: check-merge-status
     if: ${{ needs.check-merge-status.outputs.pr_merged == 'true' }}  # 引用上一步的输出值来判断
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
