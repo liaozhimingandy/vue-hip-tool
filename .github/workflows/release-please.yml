@@ -9,6 +9,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    outputs:
+      pr_merged: ${{ steps.release.outputs.release_created }}  # 将输出值传递给后续的步骤
     permissions:
       contents: write        # 允许写入代码内容
       pull-requests: write   # 允许创建和管理 Pull Requests
