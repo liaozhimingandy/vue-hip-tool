@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.19](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.18...v0.2.19) (2024-11-10)
+
+
+### Bug Fixes
+
+* 完成拆分将一个job拆成多个jobs执行 ([a3aa043](https://github.com/liaozhimingandy/vue-hip-tool/commit/a3aa0437d70713f2cc6ae7cd418984517acb3698))
+
 ## [0.2.18](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.17...v0.2.18) (2024-11-10)
 
 
