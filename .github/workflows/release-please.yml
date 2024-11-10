@@ -10,7 +10,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     outputs:
-      pr_merged: ${{ steps.release.outputs.release_created }}  # 将输出值传递给后续的步骤
+      release_created: ${{ steps.release.outputs.release_created }}  # 将输出值传递给后续的步骤
     permissions:
       contents: write        # 允许写入代码内容
       pull-requests: write   # 允许创建和管理 Pull Requests
@@ -36,7 +36,7 @@ jobs:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       - name: echo
         run: |
-          echo "release_created: ${{ env.release_created }}"
+          echo "release_created: ${{ needs.release.outputs.release_created }}"
 
       - name: Setup Node
         uses: actions/setup-node@v4
