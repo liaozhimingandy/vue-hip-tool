@@ -76,7 +76,7 @@ jobs:
       # 上传构建文件到 GitHub Release
       - name: Create or update GitHub Release and upload assets
         uses: softprops/action-gh-release@v2.0.9
-        # if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: build.zip  # 上传打包后的文件
         env:
