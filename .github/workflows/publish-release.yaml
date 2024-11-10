@@ -35,7 +35,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: check-merge-status
-    if: ${{ needs.check-merge-status.outputs.pr_merged == 'true' }}  # 引用上一步的输出值来判断
+    # if: ${{ needs.check-merge-status.outputs.pr_merged == 'true' }}  # 引用上一步的输出值来判断
 
     steps:
       - name: Checkout
@@ -48,6 +48,7 @@ jobs:
       # 确保在特定的分支（例如 main）上执行
       - name: Check out specific branch
         run: |
+          echo "值: ${{needs.check-merge-status.outputs.pr_merged}}"
           git fetch origin main
           git checkout main
 
