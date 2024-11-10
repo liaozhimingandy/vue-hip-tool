@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.5](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.4...v0.2.5) (2024-11-10)
+
+
+### Bug Fixes
+
+* 调试使用Github的环境变量1 ([26f89ce](https://github.com/liaozhimingandy/vue-hip-tool/commit/26f89ce1cdf78888e777dff21b84ee95eee9bc3e))
+* 调试使用Github的环境变量2 ([d228497](https://github.com/liaozhimingandy/vue-hip-tool/commit/d2284978d43484ceecf62c60693bab5496a28d43))
+* 调试使用Github的环境变量3 ([336a92d](https://github.com/liaozhimingandy/vue-hip-tool/commit/336a92d9a79d7e1f40965fda8f2f456f97a88449))
+* 调试使用Github的环境变量3 ([5ea0f90](https://github.com/liaozhimingandy/vue-hip-tool/commit/5ea0f901ba3b6374331f17eb893975e297b59cda))
+* 调试使用Github的环境变量4 ([076dda7](https://github.com/liaozhimingandy/vue-hip-tool/commit/076dda78508ab7850ea5090aea1b64724bfbde13))
+* 调试使用Github的环境变量5 ([7d70fe1](https://github.com/liaozhimingandy/vue-hip-tool/commit/7d70fe134d6f4f0b75b0d8f94772552c3fd1f81b))
+* 调试使用Github的环境变量6 ([e5157be](https://github.com/liaozhimingandy/vue-hip-tool/commit/e5157be15bc5905fa4343657745985f0551d727a))
+* 调试使用Github的环境变量7 ([a74388d](https://github.com/liaozhimingandy/vue-hip-tool/commit/a74388d7ad8cb4a4aa2b4112b4028b005835513e))
+
 ## [0.2.4](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.3...v0.2.4) (2024-11-10)
 
 
