@@ -46,7 +46,7 @@ jobs:
       # 确保在特定的分支（例如 main）上执行
       - name: Check out specific branch
         run: |
-          echo "值: ${{ pr_merged }}"
+          echo "值: ${{ needs.check-merge-status.outputs.pr_merged }}"
           git fetch origin main
           git checkout main
 
