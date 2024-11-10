@@ -21,4 +21,4 @@ jobs:
           release-type: "node"  # 这个可以是你的项目使用的配置文件对应的语言, 一般node使用的是package.json
           token: "${{ secrets.GH_TOKEN }}"  # 使用你的个人访问令牌
           target-branch: ${{ github.ref_name }}
-          skip-github-release: true
+          skip-github-pull-request: true
