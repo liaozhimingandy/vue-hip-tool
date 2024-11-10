@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.4](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.3...v0.2.4) (2024-11-10)
+
+
+### Bug Fixes
+
+* env环境变量无法识别问题仍存在,现在还原为之前方式 ([1c28c3c](https://github.com/liaozhimingandy/vue-hip-tool/commit/1c28c3c034e97992efdf40b747063b839e56a98f))
+* 调试使用Github的环境变量 ([eac9848](https://github.com/liaozhimingandy/vue-hip-tool/commit/eac9848d4ec6b965a51c79341e643049df932f5c))
+
 ## [0.2.3](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.2...v0.2.3) (2024-11-09)
 
 
