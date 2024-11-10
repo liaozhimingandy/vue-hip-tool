@@ -34,9 +34,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
-      - name: echo
-        run: |
-          echo "release_created: ${{ needs.release.outputs.release_created }}"
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -63,4 +60,4 @@ jobs:
       - name: Upload Release Artifact
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ steps.release.outputs.tag_name }} build.zip
+        run: gh release upload ${{ needs.release.outputs.tag_name }} build.zip
