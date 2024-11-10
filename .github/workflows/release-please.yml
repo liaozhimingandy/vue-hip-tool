@@ -57,7 +57,7 @@ jobs:
       # 创建新的发布
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
-        if:  ${{ steps.release.outputs.release_created }} && startsWith(github.ref, 'refs/tags/')
+        if:  ${{ steps.release.outputs.release_created != null }} && startsWith(github.ref, 'refs/tags/')
         with:
           files: |
             build.zip
