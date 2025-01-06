@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.21...v0.3.0) (2025-01-06)
+
+
+### Features
+
+* **main:** 更新程序 ([2d2d6d8](https://github.com/liaozhimingandy/vue-hip-tool/commit/2d2d6d8771c7caeb43d57b0623d347315616cb0c))
+
 ## [0.2.21](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.20...v0.2.21) (2024-11-10)
 
 
