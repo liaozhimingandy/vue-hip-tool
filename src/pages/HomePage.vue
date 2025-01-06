@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {ref, h, reactive} from 'vue'
+import {ref, h} from 'vue'
 import {CScrollbar} from 'c-scrollbar'; // 滚动条
 import {
   ApiOutlined,
@@ -12,13 +12,13 @@ import ServicesPage from "@/pages/ServicesPage.vue";
 // 菜单项
 const items = ref([
   {
-    key: '1',
+    key: 1,
     icon: () => h(ApiOutlined),
     label: '交互服务',
     title: '交互服务',
   },
   {
-    key: '2',
+    key: 2,
     icon: () => h(FileTextOutlined),
     label: '电子病历共享文档',
     title: '电子病历共享文档',
@@ -27,12 +27,12 @@ const items = ref([
 ])
 
 // 选中的菜单
-const selectedKeys = ref<string[]>(['1'])
+const selectedKeys = ref<[number]>([1, ])
 // 子组件列表
-const components = reactive<any>({
-  '1': ServicesPage,
-  '2': CDAPage
-});
+const components = {
+  1: ServicesPage,
+  2: CDAPage
+};
 const version = __APP_VERSION__;
 const APP_NAME = import.meta.env.VITE_APP_NAME;
 // 是否已经折叠
@@ -47,7 +47,7 @@ const collapsed = ref(false);
         <a-col :xs="0" :sm="0" :md="4" :lg="4" :xl="4">
           <ClusterOutlined style="font-size: 28px"/>
         </a-col>
-        <a-col :xs="24" :sm="24" :md="16" :lg="16" :xl="16" style="text-align: center">
+        <a-col :xs="24" :sm="24" :md="16" :lg="16" :xl="16" style="text-align: center;align-content: center">
           <a-typography-title style="font-size: 20px;">{{ APP_NAME }}</a-typography-title>
         </a-col>
         <a-col :xs="0" :sm="0" :md="4" :lg="4" :xl="4" style="text-align: right">
@@ -71,7 +71,7 @@ const collapsed = ref(false);
         </c-scrollbar>
       </a-layout-content>
     </a-layout>
-    <a-layout-footer style="text-align: center; background-color: white">©2024 廖志明</a-layout-footer>
+    <a-layout-footer style="text-align: center; background-color: white">©{{ new Date().getFullYear() }} 廖志明</a-layout-footer>
   </a-layout>
 </template>
 

@@ -17,24 +17,4 @@ const locale = ref(zhCN);
 </template>
 
 <style>
-:root {
-  --font-size-base: 16px;
-}
-
-body {
-  font-size: var(--font-size-base);
-}
-
-/* 自定义进度条颜色 */
-#nprogress .bar{
-  background: #027AFF !important;
-}
-/* 自定义进度条位置 */
-#nprogress .bar {
-  height: 5px; /* 调整进度条的高度 */
-  top: 0; /* 使进度条紧贴顶部 */
-  position: fixed;
-  left: 0;
-  width: 100%;
-}
 </style>

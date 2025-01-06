@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {reactive, ref} from 'vue';
+import {computed, reactive, ref} from 'vue';
 import {notification} from "ant-design-vue";
 
 const [api, contextHolder] = notification.useNotification();
@@ -7,10 +7,9 @@ import {fetchDownloadCdasByAdmNo} from '@/graphql';
 import {DownloadOutlined} from "@ant-design/icons-vue";
 import {Rule} from "ant-design-vue/es/form";
 
-
-const value = ref('');
 const isEnableSearch = ref<boolean>(true);
 const formRef = ref();
+const prompt_export = computed(() => isEnableSearch.value === true ? "导出" : "正在导出...")
 
 interface CDAParams {
   admNo: string;
@@ -35,11 +34,21 @@ const rules: Record<string, Rule[]> = {
 const onSearch = () => {
   formRef.value
       .validate().then(() => {
+    // 重置状态
+    formState.code = 0;
+    formState.download_url = '';
     isEnableSearch.value = false;
     fetchDownloadCdasByAdmNo(formState.admNo)
         .then(result => {
-          formState.download_url = result.downloadCdasByAdmNo.message;
-          formState.code = result.downloadCdasByAdmNo.code;
+          if (result.readCdasByAdmNo != undefined) {
+            formState.download_url = result.readCdasByAdmNo;
+            formState.code = 200;
+          } else {
+            api.error({
+              message: '温馨提示',
+              description: result,
+            })
+          }
         })
         .catch(error => {
           api.error({
@@ -79,7 +88,7 @@ const onSearch = () => {
           <a-input-search
               v-model:value="formState.admNo"
               placeholder="此处输入就诊流水号"
-              enter-button="导出"
+              :enter-button="prompt_export"
               size="large"
               @search="onSearch"
               style="width: 50vw"

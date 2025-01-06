@@ -1,7 +1,7 @@
 import { createApp} from 'vue';
 // @ts-ignore
 import router from "@/router/index";
-
+import './style.css'
 // @ts-ignore
 import App from '@/App.vue';
 

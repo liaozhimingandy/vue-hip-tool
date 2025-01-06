@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "PatientInfoQuery": [
+            "params": [
                 {
                     "comment": "患者ID",
                     "eg": "",
@@ -15,7 +15,7 @@
             "service_name": "个人信息查询服务"
         },
         {
-            "OrganizationInfoQuery": [
+            "params": [
                 {
                     "comment": "科室ID",
                     "eg": "",
@@ -29,7 +29,7 @@
             "service_name": "医疗卫生机构（科室）信息查询服务"
         },
         {
-            "ProviderInfoQuery": [
+            "params": [
                 {
                     "comment": "员工工号",
                     "eg": "",
@@ -46,9 +46,9 @@
             "rank": "五级乙等",
             "service_code": "TerminologyQuery",
             "service_name": "术语查询服务",
-            "TerminologyQuery": [
+            "params": [
                 {
-                    "comment": "术语Code",
+                    "comment": "术语Cod",
                     "eg": "",
                     "path": "xmlns:controlActProcess/xmlns:queryByParameter/xmlns:valueSet/xmlns:valueSetItems/xmlns:code/@code",
                     "sql": "select * FROM MD_M06001 NOLOCK WHERE CODE = /*/controlActProcess/queryByParameter/valueSet/valueSetItems/code/@code",
@@ -57,13 +57,13 @@
             ]
         },
         {
-            "DocumentAccess": [
+            "params": [
                 {
                     "comment": "cda文档ID",
                     "eg": "",
                     "path": "xmlns:controlActProcess/xmlns:queryByParameter/xmlns:queryId/@extension",
                     "sql": "select * from CDADocument WHERE DocumentID = /RCMR_IN000029UV01/controlActProcess/queryByParameter/queryId/@extension",
-                    "value": ""
+                    "value": "123456"
                 }
             ],
             "rank": "三级",
@@ -71,13 +71,13 @@
             "service_name": "电子病历文档调阅服务"
         },
         {
-            "DocumentRetrieve": [
+            "params": [
                 {
                     "comment": "cda文档ID",
                     "eg": "",
-                    "path": "xmlns:controlActProcess/xmlns:queryByParameter/xmlns:queryId/@extension",
+                    "path": "xmlns:controlActProcess/xmlns:queryByParameter/xmlns:clinicalDocument.id/xmlns:value/@extension",
                     "sql": "select * from CDADocument WHERE DocumentID = /RCMR_IN000029UV01/controlActProcess/queryByParameter/queryId/@extension",
-                    "value": ""
+                    "value": "123456"
                 }
             ],
             "rank": "三级",
@@ -85,7 +85,7 @@
             "service_name": "电子病历文档检索服务"
         },
         {
-            "EncounterCardInfoQuery": [
+            "params": [
                 {
                     "comment": "就诊卡号",
                     "eg": "",
@@ -102,18 +102,18 @@
             "rank": "五级乙等",
             "service_code": "SourceAndScheduleInfoQuery",
             "service_name": "号源排班信息查询服务",
-            "SourceAndScheduleInfoQuery": [
+            "params": [
                 {
                     "comment": "患者ID",
                     "eg": "",
-                    "path": "xmlns:controlActProcess/xmlns:queryByParameter/xmlns:scheduleId/xmlns:value/xmlns:item/@extension",
+                    "path": "xmlns:controlActProcess/xmlns:queryByParameter/xmlns:scheduleId/xmlns:value/@extension",
                     "sql": "",
                     "value": ""
                 }
             ]
         },
         {
-            "OutPatientInfoQuery": [
+            "params": [
                 {
                     "comment": "就诊流水号",
                     "eg": "",
@@ -127,7 +127,7 @@
             "service_name": "门诊挂号信息查询服务"
         },
         {
-            "InPatientInfoQuery": [
+            "params": [
                 {
                     "comment": "就诊流水号",
                     "eg": "",
@@ -144,7 +144,7 @@
             "rank": "四级甲等",
             "service_code": "TransferInfoQuery",
             "service_name": "住院转科信息查询服务",
-            "TransferInfoQuery": [
+            "params": [
                 {
                     "comment": "就诊流水号",
                     "eg": "",
@@ -155,7 +155,7 @@
             ]
         },
         {
-            "DischargeInfoQuery": [
+            "params": [
                 {
                     "comment": "就诊流水号",
                     "eg": "",
@@ -169,7 +169,7 @@
             "service_name": "出院登记信息查询服务"
         },
         {
-            "OrderInfoQuery": [
+            "params": [
                 {
                     "comment": "医嘱号",
                     "eg": "",
@@ -183,7 +183,7 @@
             "service_name": "医嘱信息查询服务"
         },
         {
-            "ExamAppInfoQuery": [
+            "params": [
                 {
                     "comment": "检验申请单号",
                     "eg": "",
@@ -197,7 +197,7 @@
             "service_name": "检验申请信息查询服务"
         },
         {
-            "CheckAppInfoQuery": [
+            "params": [
                 {
                     "comment": "检查申请单号",
                     "eg": "",
@@ -211,7 +211,7 @@
             "service_name": "检查申请信息查询服务"
         },
         {
-            "PathologyAppInfoQuery": [
+            "params": [
                 {
                     "comment": "病理检查申请单号",
                     "eg": "",
@@ -225,7 +225,7 @@
             "service_name": "病理申请信息查询服务"
         },
         {
-            "BloodTransAppInfoQuery": [
+            "params": [
                 {
                     "comment": "输血申请单单号",
                     "eg": "",
@@ -239,7 +239,7 @@
             "service_name": "输血申请信息查询服务"
         },
         {
-            "OperationAppInfoQuery": [
+            "params": [
                 {
                     "comment": "手术申请单号",
                     "eg": "",
@@ -253,7 +253,7 @@
             "service_name": "手术申请信息查询服务"
         },
         {
-            "OutPatientAppointStatusInfoQuery": [
+            "params": [
                 {
                     "comment": "预约ID",
                     "eg": "",
@@ -267,7 +267,7 @@
             "service_name": "门诊预约状态信息查询服务"
         },
         {
-            "CheckAppointStatusInfoQuery": [
+            "params": [
                 {
                     "comment": "检查预约ID",
                     "eg": "",
@@ -281,7 +281,7 @@
             "service_name": "检查预约状态信息查询服务"
         },
         {
-            "OrderFillerStatusInfoQuery": [
+            "params": [
                 {
                     "comment": "医嘱执行ID",
                     "eg": "",
@@ -295,7 +295,7 @@
             "service_name": "医嘱执行状态信息查询服务"
         },
         {
-            "CheckStatusInfoQuery": [
+            "params": [
                 {
                     "comment": "检查申请单号",
                     "eg": "",
@@ -309,7 +309,7 @@
             "service_name": "检查状态信息查询服务"
         },
         {
-            "ExamStatusInfoQuery": [
+            "params": [
                 {
                     "comment": "检验申请单号",
                     "eg": "",
@@ -323,7 +323,7 @@
             "service_name": "检验状态信息查询服务"
         },
         {
-            "OperationScheduleInfoQuery": [
+            "params": [
                 {
                     "comment": "手术申请单号",
                     "eg": "",
@@ -337,7 +337,7 @@
             "service_name": "手术排班信息查询服务"
         },
         {
-            "OperationStatusInfoQuery": [
+            "params": [
                 {
                     "comment": "手术申请单号",
                     "eg": "",
