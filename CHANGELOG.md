@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.3.0...v0.4.0) (2025-01-13)
+
+
+### Features
+
+* **main:** 修复已知问题 ([c1729ec](https://github.com/liaozhimingandy/vue-hip-tool/commit/c1729ecf14b7166b2f9af8c07493ab76f527c42b))
+
 ## [0.3.0](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.2.21...v0.3.0) (2025-01-06)
 
 
