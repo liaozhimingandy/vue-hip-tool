@@ -23,8 +23,11 @@ const services = computed(() => data.data.filter((item: {
   rank: string;
 }) => serviceOptions.value.indexOf(item.rank) <= serviceOptions.value.indexOf(rank.value)));
 const download_url = ref('')
+// 是否正在提交
+const is_doing = ref<boolean>(false);
 
 const onSubmit = () => {
+  is_doing.value = true;
   fetchExamplesServices({data: services.value})
       .then(result => {
         if (result.examplesServices != undefined) {
@@ -34,13 +37,15 @@ const onSubmit = () => {
             message: '温馨提示',
             description: result,
           })
-        }
+        };
+        is_doing.value = false;
       })
       .catch(error => {
         api.error({
           message: '温馨提示',
           description: error,
-        })
+        });
+        is_doing.value = false;
       })
 };
 
@@ -74,7 +79,7 @@ watch(rank, () => {
               <a-input v-model:value="item.value" :placeholder="item.path.toString().replace(/xmlns:/g, '')"
                        has-feedback show-count>
                 <template #suffix>
-                  <a-tooltip :title="item.sql">
+                  <a-tooltip v-if="item.sql != ''" :title="item.sql">
                     <info-circle-outlined style="color: rgba(0, 0, 0, 0.45)"/>
                   </a-tooltip>
                 </template>
@@ -99,7 +104,7 @@ watch(rank, () => {
           </a-result>
         </a-form-item>
         <a-form-item style="padding: 6px">
-          <a-button v-if="download_url == ''" type="primary" html-type="submit" @click="onSubmit" block>提交
+          <a-button v-if="download_url == ''" type="primary" html-type="submit" @click="onSubmit" block :disabled="is_doing">提交
           </a-button>
           <a-button v-else type="primary" @click="() => download_url = '' " danger block>重置</a-button>
         </a-form-item>
