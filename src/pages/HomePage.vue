@@ -4,24 +4,32 @@ import {CScrollbar} from 'c-scrollbar'; // 滚动条
 import {
   ApiOutlined,
   FileTextOutlined,
-  ClusterOutlined
+  ClusterOutlined,
+  SettingOutlined
 } from '@ant-design/icons-vue';
 import CDAPage from "@/pages/CDAPage.vue";
 import ServicesPage from "@/pages/ServicesPage.vue";
+import SettingsPage from "@/pages/SettingsPage.vue";
 
 // 菜单项
 const items = ref([
   {
     key: 1,
     icon: () => h(ApiOutlined),
-    label: '交互服务',
-    title: '交互服务',
+    label: '互联互通交互服务',
+    title: '互联互通交互服务',
   },
   {
     key: 2,
     icon: () => h(FileTextOutlined),
     label: '电子病历共享文档',
     title: '电子病历共享文档',
+  },
+    {
+    key: 3,
+    icon: () => h(SettingOutlined),
+    label: '设置',
+    title: '设置',
   },
 
 ])
@@ -31,7 +39,8 @@ const selectedKeys = ref<[number]>([1, ])
 // 子组件列表
 const components = {
   1: ServicesPage,
-  2: CDAPage
+  2: CDAPage,
+  3: SettingsPage,
 };
 const version = __APP_VERSION__;
 const APP_NAME = import.meta.env.VITE_APP_NAME;
