@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.4.0...v0.5.0) (2025-02-18)
+
+
+### Features
+
+* **main:** 添加自定义设置接口地址功能 ([ebd7f2e](https://github.com/liaozhimingandy/vue-hip-tool/commit/ebd7f2e6e11915d87acb6504394447ad92a04f9a))
+
 ## [0.4.0](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.3.0...v0.4.0) (2025-01-13)
 
 
