@@ -29,21 +29,21 @@ const is_doing = ref<boolean>(false);
 const onSubmit = () => {
   is_doing.value = true;
   fetchExamplesServices({data: services.value})
-      .then(result => {
-        if (result.examplesServices != undefined) {
-          download_url.value = result.examplesServices;
+      .then((r: any) => {
+        if (r.examplesServices != undefined) {
+          download_url.value = r.examplesServices;
         } else {
           api.error({
             message: '温馨提示',
-            description: result,
+            description: r,
           })
         };
         is_doing.value = false;
       })
-      .catch(error => {
+      .catch((e: any) => {
         api.error({
           message: '温馨提示',
-          description: error,
+          description: e,
         });
         is_doing.value = false;
       })

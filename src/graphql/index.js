@@ -9,7 +9,7 @@ export const fetchExamplesServices = (data) => {
         examplesServices(data: $content)
     }`;
     let content = cloneDeep(data)
-    content.data.forEach(function (item) {
+    content.data.forEach((item)=> {
         item['serviceCode'] = item['service_code'];
         item['serviceName'] = item['service_name'];
         delete item['service_code']

@@ -11,5 +11,4 @@ const app = createApp(App);
 //   app.config.devtools = false; // 禁用 Vue Devtools
 //   app.config.performance = false; // 禁用性能追踪
 // }
-
 app.use(router).mount('#app')
