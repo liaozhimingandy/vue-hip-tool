@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.5.0...v0.5.1) (2025-03-10)
+
+
+### Bug Fixes
+
+* **main:** 修复已知bug;api地址调整后同步问题,下一个版本处理 ([fffd240](https://github.com/liaozhimingandy/vue-hip-tool/commit/fffd240cc28dafed0d572e6117ef84640949f300))
+
 ## [0.5.0](https://github.com/liaozhimingandy/vue-hip-tool/compare/v0.4.0...v0.5.0) (2025-02-18)
 
 
